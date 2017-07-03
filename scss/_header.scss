@@ -1,0 +1,454 @@
+/***********************************************************************************************************************
+************** header
+***********************************************************************************************************************/
+
+header[role='banner'] {
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media(max-width: 1230px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+  }
+
+  .burger {
+    display: none;
+
+    @media(max-width: 1230px) {
+      display: block;
+      width: 30px;
+      height: 23px;
+      cursor: pointer;
+      background: transparent;
+      position: relative;
+    }
+
+    @media(max-width: 480px) {
+      margin: 0 auto;
+    }
+
+    .burger-top,
+    .burger-center,
+    .burger-bottom {
+      @include smooth(.4s);
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      -webkit-transform-origin: left;
+      -moz-transform-origin: left;
+      -ms-transform-origin: left;
+      -o-transform-origin: left;
+      transform-origin: left;
+    }
+
+    .burger-top {
+      top: 0;
+    }
+
+    .burger-bottom {
+      bottom: 0;
+    }
+
+    .burger-center {
+      top: 0;
+      bottom: 0;
+    }
+
+    &.active .burger-top {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &.active .burger-center {
+      opacity: 0;
+      left: -15px;
+    }
+
+    &.active .burger-bottom {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      display: block;
+      font-weight: 300;
+      color: rgba(255, 255, 255, .8);
+      position: relative;
+      line-height: 1;
+      margin: 0 25px 0 0;
+
+      &:after {
+        content: '/';
+        color: #949ea6;
+        position: absolute;
+        right: -16px;
+        top: 0;
+      }
+
+      &:last-of-type {
+        margin: 0;
+
+        &:after {
+          display: none;
+        }
+
+      }
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+
+      &.active {
+        color: rgba(255, 255, 255, 1);
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #f5ca00;
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+        }
+
+      }
+
+    }
+
+    @media(max-width: 1230px) {
+      @include smooth(.6s);
+      display: block;
+      background: #1d1d1d;
+      position: fixed;
+      width: 100%;
+      height: calc(100vh - 54px);
+      left: 0;
+      top: 120%;
+      z-index: 1001;
+      overflow: auto;
+      padding: 50px 0 0 0;
+      border-top: 2px solid rgba(255, 255, 255, .8);
+
+      &.active {
+        top: 54px;
+      }
+
+      a {
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 1);
+        margin: 0 auto;
+        max-width: 300px;
+        border-top: 1px solid #fff;
+        padding: 10px 0;
+
+        &:after {
+          display: none;
+        }
+
+        &.active {
+          color: #f5ca00;
+
+          &:before {
+            display: none;
+          }
+
+        }
+
+        &:last-of-type {
+          margin: 0 auto;
+          border-bottom: 1px solid #fff;
+        }
+
+      }
+
+    }
+
+  }
+
+  .button-yellow {
+    background: url(../images/button-yellow.png) no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .location-phone {
+    display: flex;
+    justify-content: space-between;
+
+    .select-city {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      position: relative;
+      text-align: right;
+      margin: 0 50px 0 0;
+
+      ul {
+        display: none;
+      }
+
+      &.active {
+
+        ul {
+          display: block;
+          padding: 10px 25px 20px 15px;
+          position: absolute;
+          top: calc(100% + 20px);
+          right: 0;
+          background: #fff;
+          z-index: 10;
+
+          li {
+            display: block;
+            text-align: right;
+            margin: 10px 0;
+            cursor: pointer;
+
+            span {
+              color: #000;
+              white-space: nowrap;
+            }
+
+            a {
+              display: none;
+            }
+
+            &:hover span,
+            &.active span {
+              color: #f5ca00;
+            }
+
+          }
+
+          @media(max-width: 768px) {
+            top: calc(100% + 10px);
+          }
+
+        }
+
+      }
+
+      @media(max-width: 768px) {
+        margin: 0 20px 0 0;
+      }
+
+    }
+
+    .current-city {
+      display: block;
+      vertical-align: middle;
+      font-size: 37px;
+      color: #68868e;
+      font-weight: 300;
+      line-height: 1;
+      position: relative;
+      white-space: nowrap;
+      padding: 0 0 0 40px;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 27px;
+        height: 26px;
+        background: url(../images/icon-geo-yellow.png) no-repeat 0 0;
+        position: absolute;
+        top: 5px;
+        left: 0;
+      }
+
+      @media(max-width: 768px) {
+        font-size: 24px;
+        padding: 0 0 0 30px;
+
+        &:before {
+          width: 21px;
+          height: 20px;
+          background-size: cover;
+          top: 2px;
+        }
+
+      }
+
+    }
+
+    .select-control {
+      @include smooth(.4s);
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: underline;
+      text-transform: uppercase;
+      margin: 5px 0 0 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+    .link-phone {
+      display: block;
+      margin: 0 20px 0 0;
+      text-align: right;
+
+      .current-phone {
+        display: block;
+        font-weight: 300;
+        font-size: 37px;
+        color: #68868e;
+        line-height: 1;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 17px;
+          color: #f5ca00;
+          line-height: 1;
+          margin: 5px 0 0 0;
+        }
+
+        &:hover {
+          color: #f5ca00;
+        }
+
+        @media(max-width: 768px) {
+          font-size: 24px;
+        }
+
+      }
+
+      .callback {
+        @include smooth(.4s);
+        display: inline-block;
+        font-size: 12px;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: underline;
+        text-transform: uppercase;
+        margin: 5px 0 0 0;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+      }
+
+    }
+
+    @media(max-width: 480px) {
+      display: block;
+
+      .select-city,
+      .link-phone {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .current-city {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      .select-control {
+        display: block;
+      }
+
+      .callback,
+      .select-control{
+        margin: 0;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 1230px) {
+
+    .row:last-of-type .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .location-phone,
+    .button-yellow,
+    .logo {
+      margin: 10px;
+    }
+
+  }
+
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > span {
+    display: block;
+    margin: 0 15px 0 0;
+    color: rgba(104, 134, 142, .8);
+    font-weight: 300;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    display: block;
+    width: 35px;
+    height: 24px;
+    background: url(../images/sprite-payment-methods.png) no-repeat 0 0;
+    margin: 0 10px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+  }
+
+  li:nth-child(2) {background-position: -35px 0;}
+  li:nth-child(3) {background-position: -70px 0;}
+  li:nth-child(4) {background-position: -105px 0;}
+  li:nth-child(5) {background-position: -140px 0;}
+  li:nth-child(6) {background-position: -175px 0;}
+  li:nth-child(7) {background-position: -210px 0;}
+
+  @media(max-width: 480px) {
+    display: none;
+  }
+
+}

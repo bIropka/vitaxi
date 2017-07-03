@@ -1,0 +1,20 @@
+@import "fonts";
+
+@import "custom-mixins";
+
+@import "jquery-ui.min";
+@import "jquery-ui-timepicker-addon";
+@import "../libs/font-awesome-4.7.0/scss/font-awesome";
+@import "../libs/foundation-6.3.1-custom/foundation";
+@import "../libs/slick/slick";
+
+@import "general";
+@import "modal";
+@import "header";
+@import "footer";
+@import "breadcrumbs";
+@import "form-order";
+@import "advantages";
+@import "promo-block";
+@import "previews";
+

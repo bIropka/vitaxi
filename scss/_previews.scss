@@ -1,0 +1,256 @@
+/***********************************************************************************************************************
+************** previews
+***********************************************************************************************************************/
+
+.previews {
+  background: #1d1d1d;
+  padding: 0 0 30px 0;
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media(max-width: 1320px) {
+      justify-content: center;
+    }
+
+    @media(max-width: 1230px) {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+  }
+
+  h2 {
+    display: inline-block;
+    width: auto;
+    background: #1d1d1d;
+    overflow: hidden;
+    font-size: 23px;
+    color: #fff;
+    text-align: left;
+    font-weight: 400;
+    position: relative;
+    left: -40px;
+    top: 75px;
+    padding: 0 15px 40px 0;
+    margin: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 65px;
+      height: 2px;
+      background: #ffcd00;
+      margin: 15px 0 0 0;
+    }
+
+    @media(max-width: 480px) {
+      display: block;
+      left: 0;
+      top: 0;
+      padding: 0;
+      background: transparent;
+      text-align: center;
+
+      &:after {
+        margin: 15px auto 0;
+      }
+
+    }
+
+  }
+
+  .button-yellow {
+    position: relative;
+    top: -25px;
+    margin: 0 auto;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 100%;
+      background: #1d1d1d;
+      position: absolute;
+      left: -15px;
+      top: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 100%;
+      background: #1d1d1d;
+      position: absolute;
+      right: -15px;
+      top: 0;
+    }
+
+    @media(max-width: 480px) {
+      top: 0;
+      margin: 50px auto 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 480px) {
+    padding: 30px 0;
+  }
+
+}
+
+.previews-list {
+  border: 1px dashed rgba(255, 255, 255, .8);
+  padding: 30px 0;
+
+  @media(max-width: 480px) {
+    border: none;
+    padding: 0;
+  }
+
+}
+
+.previews-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+
+  .image-decor {
+    width: 128px;
+    height: 128px;
+    border: 15px solid #1d1d1d;
+    border-radius: 50%;
+    position: relative;
+    left: -64px;
+    padding: 1px;
+
+    @media(max-width: 480px) {
+      left: 0;
+      margin: 0 auto;
+    }
+
+  }
+
+  .image-wrap {
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+    border: 8px solid #1d1d1d;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .8);
+    border-radius: 50%;
+  }
+
+  .previews-info {
+    width: calc(100% - 100px);
+    position: relative;
+    left: -25px;
+
+    .text {
+      font-weight: 300;
+      color: rgba(255, 255, 255, .8);
+      margin: 0 0 5px 0;
+    }
+
+    @media(max-width: 480px) {
+      width: 100%;
+      left: 0;
+      text-align: center;
+    }
+
+  }
+
+  @media(max-width: 480px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+.reviews, .news {
+  width: 525px;
+
+  @media(max-width: 1230px) {
+    width: calc(100% - 100px);
+    margin: 0 30px 0 0;
+  }
+
+  @media(max-width: 480px) {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+}
+
+.reviews {
+
+  .reviewer-name {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+
+    &:after {
+      content: ',';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px 0 0;
+    }
+
+  }
+
+  .reviewer-city {
+    display: inline-block;
+    vertical-align: middle;
+    color: #f5ca00;
+  }
+
+  @media(max-width: 1320px) {
+    margin: 0 70px 0 0;
+  }
+
+  @media(max-width: 1230px) {
+    margin: 0 30px 0 0;
+  }
+
+  @media(max-width: 480px) {
+    margin: 20px 0;
+  }
+
+}
+
+.news {
+
+  .news-title {
+    font-size: 16px;
+    color: #f5ca00;
+
+  }
+
+  time {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #8b9fa4;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 8px;
+      background: url(../images/decor-bottom.png) no-repeat 0 0;
+      margin: 0 0 0 5px;
+    }
+
+  }
+
+}

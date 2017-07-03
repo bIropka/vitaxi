@@ -1,0 +1,284 @@
+/***********************************************************************************************************************
+************** general
+***********************************************************************************************************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  font-size: 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #1d1d1d url(../images/background.jpg) no-repeat center top;
+  opacity: 0;
+}
+
+main {
+  display: block;
+  flex-grow: 1;
+}
+
+a {
+  @include smooth(.4s);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
+input {
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
+textarea {
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
+button {
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
+button {
+  @include smooth(.4s);
+  display: inline-block;
+  border: none;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &.button-red {
+    background-size: 100% auto;
+  }
+
+  &.button-blue {
+    background-size: 100% auto;
+  }
+
+  &.button-black {
+    background-size: 100% auto;
+  }
+
+  &:hover {
+    background-position: center -10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .5);
+  }
+
+}
+
+section {
+  display: block;
+  width: 100%;
+  padding: 45px 0;
+  background: #fff;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #f5ca00;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 20px;
+
+  @media(max-width: 768px) {
+    font-size: 32px;
+  }
+
+}
+
+h2 {
+  width: 100%;
+  font-size: 37px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  font-weight: 300;
+
+  @media(max-width: 768px) {
+    font-size: 26px;
+  }
+
+}
+
+.note {
+  width: 100%;
+  text-align: center;
+  color: #68868e;
+  margin: 0 0 30px 0;
+}
+
+input::-webkit-input-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea::-moz-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea:-moz-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+  color: #000;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.button-yellow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  height: 50px;
+  background: linear-gradient(to bottom, #f5ca00 50%, #f8d800 50%);
+  border-radius: 4px;
+
+  .icon {
+    @include smooth(.4s);
+    display: block;
+    width: 27px;
+    height: 27px;
+    background: url(../images/icon-wheel.png) no-repeat 0 0;
+    margin: 0 10px 0 0;
+  }
+
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &:hover .icon {
+    margin: 0 20px 0 0;
+  }
+
+}
+
+.button-black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 195px;
+  height: 45px;
+  background: #1d1d1d;
+  border-radius: 4px;
+
+  .icon {
+    @include smooth(.4s);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icon-money.png) no-repeat 0 0;
+    margin: 0 10px 0 0;
+  }
+
+  span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &:hover .icon {
+    margin: 0 20px 0 0;
+  }
+
+}
