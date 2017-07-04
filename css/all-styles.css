@@ -914,25 +914,25 @@ body .ui-tooltip {
   height: 16px; }
 
 .ui-icon, .ui-widget-content .ui-icon {
-  background-image: url("images/ui-icons_444444_256x240.png"); }
+  background-image: url("../images/ui-icons_444444_256x240.png"); }
 
 .ui-widget-header .ui-icon {
-  background-image: url("images/ui-icons_444444_256x240.png"); }
+  background-image: url("../images/ui-icons_444444_256x240.png"); }
 
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon {
-  background-image: url("images/ui-icons_555555_256x240.png"); }
+  background-image: url("../images/ui-icons_555555_256x240.png"); }
 
 .ui-state-active .ui-icon, .ui-button:active .ui-icon {
-  background-image: url("images/ui-icons_ffffff_256x240.png"); }
+  background-image: url("../images/ui-icons_ffffff_256x240.png"); }
 
 .ui-state-highlight .ui-icon, .ui-button .ui-state-highlight.ui-icon {
-  background-image: url("images/ui-icons_777620_256x240.png"); }
+  background-image: url("../images/ui-icons_777620_256x240.png"); }
 
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-  background-image: url("images/ui-icons_cc0000_256x240.png"); }
+  background-image: url("../images/ui-icons_cc0000_256x240.png"); }
 
 .ui-button .ui-icon {
-  background-image: url("images/ui-icons_777777_256x240.png"); }
+  background-image: url("../images/ui-icons_777777_256x240.png"); }
 
 .ui-icon-blank {
   background-position: 16px 16px; }
@@ -5999,6 +5999,18 @@ button {
     background-position: center -10px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5); }
 
+main {
+  background: #fff; }
+
+.page-404 main {
+  background: #fff url(../images/background-404.png) no-repeat center top;
+  padding: 0 0 40px 0; }
+@media (max-width: 1230px) {
+  .page-404 h1 {
+    text-align: center; }
+    .page-404 h1:after {
+      margin: 20px auto; } }
+
 section {
   display: block;
   width: 100%;
@@ -6006,14 +6018,32 @@ section {
   background: #fff; }
 
 h1 {
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 40px 0 0 0; }
+  h1:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #f5ca00;
+    margin: 20px 0 0 0; }
+
+.page-main main {
+  background: transparent; }
+.page-main h1 {
   font-weight: 300;
   font-size: 52px;
   color: #f5ca00;
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 20px; }
+  .page-main h1:after {
+    display: none; }
   @media (max-width: 768px) {
-    h1 {
+    .page-main h1 {
       font-size: 32px; } }
 
 h2 {
@@ -6277,6 +6307,93 @@ textarea:focus:-ms-input-placeholder {
     max-width: 400px;
     margin: 40px auto 0;
     line-height: 1; }
+  .window.window-order {
+    display: block; }
+    .window.window-order .window-inner {
+      width: 800px; }
+      @media (max-width: 768px) {
+        .window.window-order .window-inner {
+          width: 320px; } }
+    .window.window-order fieldset {
+      display: block;
+      width: 100%;
+      border: none;
+      padding: 0; }
+    .window.window-order .checkbox-wrap {
+      width: calc((100% - 35px) / 2);
+      float: left;
+      margin: 0 35px 15px 0; }
+      .window.window-order .checkbox-wrap:nth-of-type(2n + 1) {
+        margin: 0 0 15px 0; }
+      @media (max-width: 768px) {
+        .window.window-order .checkbox-wrap {
+          width: 100%;
+          margin: 0 0 15px 0; } }
+    .window.window-order input[type="checkbox"] {
+      display: none; }
+    .window.window-order input[type="checkbox"] + label {
+      font-weight: 300;
+      color: #000; }
+    .window.window-order input[type="checkbox"] + label:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 28px;
+      height: 28px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      margin: 0 20px 0 0;
+      background: #fff; }
+    .window.window-order input[type="checkbox"]:checked + label:before {
+      background: #fff url("../images/icon-ok.png") no-repeat center; }
+    .window.window-order input[type="radio"] {
+      display: none; }
+    .window.window-order .radio-wrap {
+      width: calc((100% - 35px) / 2);
+      float: left;
+      margin: 0 35px 15px 0; }
+      .window.window-order .radio-wrap:nth-of-type(2n + 1) {
+        margin: 0 0 15px 0; }
+      @media (max-width: 768px) {
+        .window.window-order .radio-wrap {
+          width: 100%;
+          margin: 0 0 15px 0; } }
+      .window.window-order .radio-wrap input[type="radio"] + label {
+        display: block;
+        font-weight: 300;
+        color: #000;
+        position: relative;
+        padding: 0 0 0 50px;
+        line-height: 29px; }
+      .window.window-order .radio-wrap input[type="radio"] + label:before {
+        content: '';
+        display: block;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid #000; }
+      .window.window-order .radio-wrap input[type="radio"]:checked + label:after {
+        content: '';
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #68868e;
+        position: absolute;
+        left: 8px;
+        top: 8px; }
+      @media (max-width: 768px) {
+        .window.window-order .radio-wrap {
+          display: block;
+          margin: 10px 0; }
+          .window.window-order .radio-wrap:last-of-type {
+            margin: 10px 0 30px; } }
+    .window.window-order button[type='submit'] {
+      margin: 20px auto 0; }
 
 /***********************************************************************************************************************
 ************** header
@@ -6439,7 +6556,8 @@ header[role='banner'] .location-phone {
       top: calc(100% + 20px);
       right: 0;
       background: #fff;
-      z-index: 10; }
+      z-index: 10;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25); }
       header[role='banner'] .location-phone .select-city.active ul li {
         display: block;
         text-align: right;
@@ -6552,6 +6670,39 @@ header[role='banner'] .location-phone {
       header[role='banner'] .location-phone .callback,
       header[role='banner'] .location-phone .select-control {
         margin: 0; } }
+header[role='banner'] .button-block {
+  position: relative; }
+  header[role='banner'] .button-block .button-yellow {
+    margin: 0 0 60px 0; }
+    @media (max-width: 1230px) {
+      header[role='banner'] .button-block .button-yellow {
+        margin: 0 0 20px 0; } }
+  header[role='banner'] .button-block .to-order-form {
+    width: 216px;
+    height: 107px;
+    background: url(../images/decor-header-order.png) no-repeat 0 0;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    text-align: center; }
+    header[role='banner'] .button-block .to-order-form span {
+      color: #fff;
+      font-size: 17px;
+      text-decoration: underline;
+      line-height: 1;
+      position: relative;
+      top: -2px;
+      left: 5px;
+      cursor: pointer; }
+      header[role='banner'] .button-block .to-order-form span:hover {
+        text-decoration: none; }
+    @media (max-width: 1230px) {
+      header[role='banner'] .button-block .to-order-form {
+        position: static;
+        top: 0;
+        width: 100%;
+        height: auto;
+        background: none; } }
 @media (max-width: 1230px) {
   header[role='banner'] .row:last-of-type .columns {
     display: flex;
@@ -6800,6 +6951,32 @@ footer[role="contentinfo"] .location-phone {
 /***********************************************************************************************************************
 ************** breadcrumbs
 ***********************************************************************************************************************/
+.breadcrumbs {
+  background: #f3f5f6;
+  padding: 20px 0; }
+  .breadcrumbs ul li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1; }
+    .breadcrumbs ul li a {
+      font-size: inherit;
+      color: #858f92;
+      line-height: inherit; }
+      .breadcrumbs ul li a:hover {
+        color: #000; }
+    .breadcrumbs ul li:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 5px;
+      height: 8px;
+      background: url(../images/icon-angle-right.png) no-repeat 0 0;
+      margin: 0 5px 0 8px; }
+    .breadcrumbs ul li:last-child:after {
+      display: none; }
+
 /***********************************************************************************************************************
 ************** form-order
 ***********************************************************************************************************************/
@@ -7403,5 +7580,62 @@ footer[role="contentinfo"] .location-phone {
     height: 8px;
     background: url(../images/decor-bottom.png) no-repeat 0 0;
     margin: 0 0 0 5px; }
+
+/***********************************************************************************************************************
+************** content-404
+***********************************************************************************************************************/
+.content-404 {
+  margin: 50px 0 0 0; }
+  .content-404 .columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative; }
+  .content-404 .text-404 {
+    color: #476d77;
+    font-size: 300px;
+    line-height: 1;
+    font-weight: 300; }
+    @media (max-width: 1230px) {
+      .content-404 .text-404 {
+        font-size: 100px; } }
+  .content-404 .text {
+    margin: 50px 0 400px 0;
+    font-size: 17px;
+    position: relative;
+    max-width: 700px; }
+    .content-404 .text a {
+      color: #476d77;
+      text-decoration: underline;
+      font-size: inherit; }
+      .content-404 .text a:hover {
+        text-decoration: none; }
+    .content-404 .text:after {
+      content: '';
+      display: block;
+      width: 951px;
+      height: 388px;
+      background: url(../images/car-404.png) no-repeat 0 0;
+      position: absolute;
+      top: calc(100% + 25px);
+      right: 0; }
+    @media (max-width: 1230px) {
+      .content-404 .text {
+        position: static;
+        max-width: none;
+        margin: 25px 0 0 0; }
+        .content-404 .text:after {
+          position: static;
+          width: 100%;
+          height: auto;
+          padding-top: 41%;
+          background-size: cover;
+          margin: 25px 0 0 0; } }
+  @media (max-width: 1230px) {
+    .content-404 {
+      margin: 25px 0 0 0; }
+      .content-404 .columns {
+        display: block;
+        text-align: center; } }
 
 /*# sourceMappingURL=all-styles.css.map */

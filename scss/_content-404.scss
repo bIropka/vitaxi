@@ -1,0 +1,83 @@
+/***********************************************************************************************************************
+************** content-404
+***********************************************************************************************************************/
+
+.content-404 {
+  margin: 50px 0 0 0;
+
+  .columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .text-404 {
+    color: #476d77;
+    font-size: 300px;
+    line-height: 1;
+    font-weight: 300;
+
+    @media(max-width: 1230px) {
+      font-size: 100px;
+    }
+
+  }
+
+  .text {
+    margin: 50px 0 400px 0;
+    font-size: 17px;
+    position: relative;
+    max-width: 700px;
+
+    a {
+      color: #476d77;
+      text-decoration: underline;
+      font-size: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 951px;
+      height: 388px;
+      background: url(../images/car-404.png) no-repeat 0 0;
+      position: absolute;
+      top: calc(100% + 25px);
+      right: 0;
+    }
+
+    @media(max-width: 1230px) {
+      position: static;
+      max-width: none;
+      margin: 25px 0 0 0;
+
+      &:after {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding-top: 41%;
+        background-size: cover;
+        margin: 25px 0 0 0;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 1230px) {
+    margin: 25px 0 0 0;
+
+    .columns {
+      display: block;
+      text-align: center;
+    }
+
+  }
+
+}

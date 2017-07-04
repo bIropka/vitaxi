@@ -56,6 +56,10 @@ $(window).ready(function() {
         $('.window-callback').fadeIn();
     });
 
+    $('.to-order-form span').click(function() {
+        $('.window-order').fadeIn();
+    });
+
     $('.window').click(function (event) {
         $target = $(event.target);
         if (!$target.closest($('.window-inner')).length) {

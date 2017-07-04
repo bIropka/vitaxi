@@ -99,6 +99,33 @@ button {
 
 }
 
+main {
+  background: #fff;
+
+}
+
+.page-404 {
+
+  main {
+    background: #fff url(../images/background-404.png) no-repeat center top;
+    padding: 0 0 40px 0;
+  }
+
+  @media(max-width: 1230px) {
+
+    h1 {
+      text-align: center;
+
+      &:after {
+        margin: 20px auto;
+      }
+
+    }
+
+  }
+
+}
+
 section {
   display: block;
   width: 100%;
@@ -107,15 +134,45 @@ section {
 }
 
 h1 {
+  font-size: 32px;
   font-weight: 300;
-  font-size: 52px;
-  color: #f5ca00;
   text-transform: uppercase;
-  text-align: center;
-  margin: 0 0 20px;
+  line-height: 1;
+  margin: 40px 0 0 0;
 
-  @media(max-width: 768px) {
-    font-size: 32px;
+  &:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #f5ca00;
+    margin: 20px 0 0 0;
+  }
+
+}
+
+.page-main {
+
+  main {
+    background: transparent;
+  }
+
+  h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #f5ca00;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 20px;
+
+    &:after {
+      display: none;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 32px;
+    }
+
   }
 
 }
