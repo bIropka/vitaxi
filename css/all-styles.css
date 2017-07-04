@@ -7749,4 +7749,59 @@ footer[role="contentinfo"] .location-phone {
     .events .event-info {
       width: 100%; } }
 
+/***********************************************************************************************************************
+************** article
+***********************************************************************************************************************/
+article .note {
+  font-size: 20px;
+  color: #476d77;
+  text-align: left;
+  margin: 30px 0; }
+article .image-wrap {
+  display: block;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  margin: 0 50px 25px 0; }
+  article .image-wrap img {
+    display: block;
+    margin: 0;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%; }
+  @media (max-width: 480px) {
+    article .image-wrap {
+      float: none;
+      margin: 0 auto; } }
+article p {
+  font-size: 16px;
+  margin: 25px 0; }
+  article p a {
+    font-size: inherit;
+    color: inherit; }
+    article p a:hover {
+      text-decoration: underline; }
+article h3 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 25px 0 25px 0; }
+article ul {
+  display: inline-block; }
+  article ul li {
+    list-style: none;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 0 0 0 10px; }
+    article ul li:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 8px;
+      background: url(../images/decor-bottom-dark.png) no-repeat 0 0;
+      margin: 0 10px 0 0; }
+
 /*# sourceMappingURL=all-styles.css.map */

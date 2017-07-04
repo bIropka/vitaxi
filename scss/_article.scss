@@ -1,0 +1,84 @@
+/***********************************************************************************************************************
+************** article
+***********************************************************************************************************************/
+
+article {
+
+  .note {
+    font-size: 20px;
+    color: #476d77;
+    text-align: left;
+    margin: 30px 0;
+  }
+
+  .image-wrap {
+    display: block;
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin: 0 50px 25px 0;
+
+    img {
+      display: block;
+      margin: 0;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    @media(max-width: 480px) {
+      float: none;
+      margin: 0 auto;
+    }
+
+  }
+
+  p {
+    font-size: 16px;
+    margin: 25px 0;
+
+    a {
+      font-size: inherit;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+
+  h3 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 25px 0 25px 0;
+  }
+
+  ul {
+    display: inline-block;
+
+    li {
+      list-style: none;
+      font-size: 14px;
+      margin: 10px 0;
+      padding: 0 0 0 10px;
+
+      &:before {
+        content:'';
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 8px;
+        background: url(../images/decor-bottom-dark.png) no-repeat 0 0;
+        margin: 0 10px 0 0;
+      }
+
+    }
+
+  }
+
+}
