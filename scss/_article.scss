@@ -157,4 +157,283 @@ article {
     color: #68868e;
   }
 
+  .slider-wrap {
+    position: relative;
+
+    .slider-control {
+      @include smooth(.4s);
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: url(../images/sprite-slider.png) no-repeat;
+      opacity: .7;
+      position: absolute;
+      top: 88px;
+
+      &:hover {
+        opacity: 1;
+      }
+
+    }
+
+    .slider-control-prev {
+      background-position: left top;
+      left: -70px;
+
+      &:active {
+        left: -75px;
+      }
+
+    }
+
+    .slider-control-next {
+      background-position: right top;
+      right: -70px;
+
+      &:active {
+        right: -75px;
+      }
+
+    }
+
+    &.slider-services-wrap {
+
+      .slider-control {
+        top: 33px;
+      }
+
+    }
+
+    @media(max-width: 1320px) {
+      padding: 0 75px;
+
+      .slider-control-prev {
+        left: 5px;
+
+        &:active {
+          left: 0;
+        }
+
+      }
+
+      .slider-control-next {
+        right: 5px;
+
+        &:active {
+          right: 0;
+        }
+
+      }
+
+    }
+
+    @media(max-width: 768px) {
+      padding: 80px 0 0 0;
+
+      .slider-control-prev {
+        top: 10px;
+        left: 50px;
+
+        &:active {
+          left: 45px;
+        }
+
+      }
+
+      .slider-control-next {
+        top: 10px;
+        right: 50px;
+
+        &:active {
+          right: 45px;
+        }
+
+      }
+
+      &.slider-services-wrap {
+        padding: 0 75px;
+
+        .slider-control-prev {
+          left: 5px;
+
+          &:active {
+            left: 0;
+          }
+
+        }
+
+        .slider-control-next {
+          right: 5px;
+
+          &:active {
+            right: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.slider-cost {
+  text-align: center;
+
+  .slide {
+    width: 250px;
+  }
+
+  .image-wrap {
+    display: block;
+    width: 236px;
+    height: 236px;
+    float: none;
+    position: relative;
+    border: 13px solid #f6f6f6;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:after {
+      @include smooth(.4s);
+      content: '';
+      display: block;
+      width: 170px;
+      height: 170px;
+      box-shadow: 0 0 0 2px #f6f6f6;
+      border-radius: 50%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .icon {
+      @include smooth(.4s);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 0, 0, .77);
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      border-radius: 50%;
+
+      img {
+        min-width: 0;
+        min-height: 0;
+      }
+
+    }
+
+    &:hover {
+
+      &:after {
+        box-shadow: 0 0 0 15px #f6f6f6;
+      }
+
+      .icon {
+        transform: scale(1.1);
+      }
+
+    }
+
+  }
+
+  h4 a {
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+  .service-cost {
+    display: inline-block;
+    padding: 10px 15px;
+    background: url(../images/decor-slide-cost.png) no-repeat 0 0;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 17px;
+    margin: 10px 0 5px;
+  }
+
+  .service-cost-note {
+    color: #68868e;
+  }
+
+}
+
+.slider-services {
+  text-align: center;
+
+  .slide {
+    width: 140px;
+    position: relative;
+    padding: 20px 0 0 0;
+
+    &:after {
+      @include smooth(.4s);
+      content: '';
+      display: block;
+      width: 112px;
+      height: 112px;
+      border: 2px dashed #f6f6f6;
+      border-radius: 50%;
+      position: absolute;
+      margin: auto;
+      top: 7px;
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+  }
+
+  .image-wrap {
+    display: block;
+    width: 86px;
+    height: 86px;
+    float: none;
+    border: 1px solid #f5ca00;
+    border-radius: 50%;
+    margin: 0 auto 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #000;
+    box-shadow: 0 0 0 20px #000;
+  }
+
+  h4 a {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
 }

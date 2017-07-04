@@ -6243,6 +6243,10 @@ textarea:focus:-ms-input-placeholder {
     .content-footer .columns:first-of-type {
       margin: 20px 0 0 0; } }
 
+.slider-wrap .slide:active,
+.slider-wrap .slide:focus {
+  outline: none; }
+
 /***********************************************************************************************************************
 ************** modal
 ***********************************************************************************************************************/
@@ -7854,6 +7858,191 @@ article {
   article small {
     font-size: 14px;
     color: #68868e; }
+  article .slider-wrap {
+    position: relative; }
+    article .slider-wrap .slider-control {
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: url(../images/sprite-slider.png) no-repeat;
+      opacity: .7;
+      position: absolute;
+      top: 88px; }
+      article .slider-wrap .slider-control:hover {
+        opacity: 1; }
+    article .slider-wrap .slider-control-prev {
+      background-position: left top;
+      left: -70px; }
+      article .slider-wrap .slider-control-prev:active {
+        left: -75px; }
+    article .slider-wrap .slider-control-next {
+      background-position: right top;
+      right: -70px; }
+      article .slider-wrap .slider-control-next:active {
+        right: -75px; }
+    article .slider-wrap.slider-services-wrap .slider-control {
+      top: 33px; }
+    @media (max-width: 1320px) {
+      article .slider-wrap {
+        padding: 0 75px; }
+        article .slider-wrap .slider-control-prev {
+          left: 5px; }
+          article .slider-wrap .slider-control-prev:active {
+            left: 0; }
+        article .slider-wrap .slider-control-next {
+          right: 5px; }
+          article .slider-wrap .slider-control-next:active {
+            right: 0; } }
+    @media (max-width: 768px) {
+      article .slider-wrap {
+        padding: 80px 0 0 0; }
+        article .slider-wrap .slider-control-prev {
+          top: 10px;
+          left: 50px; }
+          article .slider-wrap .slider-control-prev:active {
+            left: 45px; }
+        article .slider-wrap .slider-control-next {
+          top: 10px;
+          right: 50px; }
+          article .slider-wrap .slider-control-next:active {
+            right: 45px; }
+        article .slider-wrap.slider-services-wrap {
+          padding: 0 75px; }
+          article .slider-wrap.slider-services-wrap .slider-control-prev {
+            left: 5px; }
+            article .slider-wrap.slider-services-wrap .slider-control-prev:active {
+              left: 0; }
+          article .slider-wrap.slider-services-wrap .slider-control-next {
+            right: 5px; }
+            article .slider-wrap.slider-services-wrap .slider-control-next:active {
+              right: 0; } }
+
+.slider-cost {
+  text-align: center; }
+  .slider-cost .slide {
+    width: 250px; }
+  .slider-cost .image-wrap {
+    display: block;
+    width: 236px;
+    height: 236px;
+    float: none;
+    position: relative;
+    border: 13px solid #f6f6f6;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .slider-cost .image-wrap:after {
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      content: '';
+      display: block;
+      width: 170px;
+      height: 170px;
+      box-shadow: 0 0 0 2px #f6f6f6;
+      border-radius: 50%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1; }
+    .slider-cost .image-wrap .icon {
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 0, 0, 0.77);
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      border-radius: 50%; }
+      .slider-cost .image-wrap .icon img {
+        min-width: 0;
+        min-height: 0; }
+    .slider-cost .image-wrap:hover:after {
+      box-shadow: 0 0 0 15px #f6f6f6; }
+    .slider-cost .image-wrap:hover .icon {
+      transform: scale(1.1); }
+  .slider-cost h4 a {
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: underline; }
+    .slider-cost h4 a:hover {
+      text-decoration: none; }
+  .slider-cost .service-cost {
+    display: inline-block;
+    padding: 10px 15px;
+    background: url(../images/decor-slide-cost.png) no-repeat 0 0;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 17px;
+    margin: 10px 0 5px; }
+  .slider-cost .service-cost-note {
+    color: #68868e; }
+
+.slider-services {
+  text-align: center; }
+  .slider-services .slide {
+    width: 140px;
+    position: relative;
+    padding: 20px 0 0 0; }
+    .slider-services .slide:after {
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      content: '';
+      display: block;
+      width: 112px;
+      height: 112px;
+      border: 2px dashed #f6f6f6;
+      border-radius: 50%;
+      position: absolute;
+      margin: auto;
+      top: 7px;
+      right: 0;
+      left: 0;
+      z-index: 1; }
+  .slider-services .image-wrap {
+    display: block;
+    width: 86px;
+    height: 86px;
+    float: none;
+    border: 1px solid #f5ca00;
+    border-radius: 50%;
+    margin: 0 auto 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #000;
+    box-shadow: 0 0 0 20px #000; }
+  .slider-services h4 a {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline; }
+    .slider-services h4 a:hover {
+      text-decoration: none; }
 
 /***********************************************************************************************************************
 ************** contacts

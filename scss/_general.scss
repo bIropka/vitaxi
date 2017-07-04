@@ -441,3 +441,8 @@ textarea:focus:-ms-input-placeholder {
   }
 
 }
+
+.slider-wrap .slide:active,
+.slider-wrap .slide:focus {
+  outline: none;
+}

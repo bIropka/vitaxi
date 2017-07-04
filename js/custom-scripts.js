@@ -87,4 +87,64 @@ $(window).ready(function() {
         $('header[role="banner"] nav').toggleClass('active');
     });
 
+    $('.slider-cost').slick({
+        slidesToShow: 4,
+        appendArrows: '.slider-cost-control',
+        prevArrow: '.slider-cost-prev',
+        nextArrow: '.slider-cost-next',
+        responsive: [
+        {
+            breakpoint: 1321,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+    ]
+    });
+
+    $('.slider-services').slick({
+        slidesToShow: 7,
+        appendArrows: '.slider-services-control',
+        prevArrow: '.slider-services-prev',
+        nextArrow: '.slider-services-next',
+        responsive: [
+            {
+                breakpoint: 1321,
+                settings: {
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
 });
