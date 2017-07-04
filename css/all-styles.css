@@ -7739,7 +7739,7 @@ footer[role="contentinfo"] .location-phone {
       vertical-align: middle;
       width: 20px;
       height: 8px;
-      background: url(../images/decor-bottom.png) no-repeat 0 0;
+      background: url(../images/decor-bottom-dark.png) no-repeat 0 0;
       margin: 0 0 0 5px; }
   @media (max-width: 480px) {
     .events .columns {
@@ -7803,5 +7803,78 @@ article ul {
       height: 8px;
       background: url(../images/decor-bottom-dark.png) no-repeat 0 0;
       margin: 0 10px 0 0; }
+
+/***********************************************************************************************************************
+************** contacts
+***********************************************************************************************************************/
+.content-contacts .title {
+  font-size: 20px;
+  color: #476d77;
+  margin: 20px 0; }
+.content-contacts .contacts-link {
+  padding: 0 0 0 10px;
+  margin: 10px 0; }
+  .content-contacts .contacts-link span {
+    font-size: 14px; }
+  .content-contacts .contacts-link a {
+    font-size: 14px; }
+  .content-contacts .contacts-link span + a {
+    color: #476d77;
+    text-decoration: underline; }
+    .content-contacts .contacts-link span + a:hover {
+      text-decoration: none; }
+  .content-contacts .contacts-link:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 8px;
+    background: url(../images/decor-bottom-dark.png) no-repeat 0 0;
+    margin: 0 10px 0 0; }
+.content-contacts .om-map {
+  height: 420px;
+  position: relative;
+  margin: 30px 0; }
+  .content-contacts .om-map address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    max-width: 310px;
+    height: 120px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 25px; }
+    .content-contacts .om-map address span {
+      display: block;
+      width: 100%;
+      color: #fff;
+      font-size: 20px;
+      font-style: normal; }
+      .content-contacts .om-map address span:last-of-type {
+        font-size: 14px; }
+        .content-contacts .om-map address span:last-of-type:after {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 2px;
+          background: #ffcd00;
+          margin: 10px 0 0 0; }
+  @media (max-width: 768px) {
+    .content-contacts .om-map {
+      height: 300px; } }
+  @media (max-width: 480px) {
+    .content-contacts .om-map {
+      overflow: hidden; }
+      .content-contacts .om-map address {
+        position: static;
+        background: #000;
+        max-width: none; } }
 
 /*# sourceMappingURL=all-styles.css.map */

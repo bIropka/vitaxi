@@ -1,0 +1,111 @@
+/***********************************************************************************************************************
+************** contacts
+***********************************************************************************************************************/
+
+.content-contacts {
+
+  .title {
+    font-size: 20px;
+    color: #476d77;
+    margin: 20px 0;
+  }
+
+  .contacts-link {
+    padding: 0 0 0 10px;
+    margin: 10px 0;
+
+    span {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+
+    span + a {
+      color: #476d77;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 8px;
+      background: url(../images/decor-bottom-dark.png) no-repeat 0 0;
+      margin: 0 10px 0 0;
+    }
+
+  }
+
+  .om-map {
+    height: 420px;
+    position: relative;
+    margin: 30px 0;
+
+    address {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      max-width: 310px;
+      height: 120px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, .5);
+      padding: 10px 25px;
+
+      span {
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-size: 20px;
+        font-style:  normal;
+
+        &:last-of-type {
+          font-size: 14px;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #ffcd00;
+            margin: 10px 0 0 0;
+          }
+
+        }
+
+      }
+
+    }
+
+    @media(max-width: 768px) {
+      height: 300px;
+    }
+
+    @media(max-width: 480px) {
+      overflow: hidden;
+
+      address {
+        position: static;
+        background: #000;
+        max-width: none;
+      }
+
+    }
+
+  }
+
+}
