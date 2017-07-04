@@ -147,4 +147,18 @@ $(window).ready(function() {
         ]
     });
 
+    $('.rate-single-steps ul li').click(function() {
+
+        if(!$(this).hasClass('active')) {
+
+            $('.rate-single-data ul li.active').removeClass('active');
+            $('.rate-single-data ul li').eq($(this).index()).addClass('active');
+
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+        }
+
+    });
+
 });

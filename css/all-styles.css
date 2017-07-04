@@ -8190,4 +8190,216 @@ article {
         background: #000;
         max-width: none; } }
 
+/***********************************************************************************************************************
+************** rate-single
+***********************************************************************************************************************/
+.rate-single {
+  padding: 40px 0; }
+
+.rate-image {
+  position: relative;
+  float: left;
+  z-index: 1; }
+  .rate-image .image-wrap {
+    width: 236px;
+    height: 236px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    background: #f5ca00; }
+    .rate-image .image-wrap img {
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%; }
+    .rate-image .image-wrap:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(245, 202, 0, 0.57);
+      position: absolute;
+      left: 0;
+      top: 0; }
+  .rate-image:after {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background: #000 url(../images/decor-bottom-white.png) no-repeat center;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -19px; }
+  @media (max-width: 640px) {
+    .rate-image {
+      width: 236px;
+      margin: 0 auto 40px;
+      float: none; } }
+
+.rate-info {
+  float: right;
+  width: calc(100% - 276px); }
+  .rate-info .text {
+    font-size: 18px;
+    line-height: 27px; }
+    .rate-info .text span {
+      font-size: inherit;
+      font-weight: 700; }
+  @media (max-width: 640px) {
+    .rate-info {
+      width: 100%;
+      float: none; } }
+
+.rate-cars {
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
+  position: relative; }
+  .rate-cars .icon {
+    margin: 0 20px 0 0; }
+  .rate-cars .rate-cars-info span {
+    display: block; }
+    .rate-cars .rate-cars-info span:first-of-type {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #436770; }
+  .rate-cars:before {
+    content: '';
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(to right, #000 1px, transparent 1px, transparent 4px) repeat-x 0 0;
+    background-size: 4px 1px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: calc(100% + 8px); }
+  .rate-cars:after {
+    content: '';
+    width: 1px;
+    height: 150px;
+    background: linear-gradient(to bottom, #000 1px, transparent 1px, transparent 4px) repeat-y 0 0;
+    background-size: 1px 4px;
+    position: absolute;
+    margin: auto;
+    bottom: 23px;
+    right: calc(100% + 158px); }
+  @media (max-width: 1023px) {
+    .rate-cars:before, .rate-cars:after {
+      display: none; } }
+
+.rate-single-steps {
+  background: #f3f5f6;
+  margin: 40px 0; }
+  .rate-single-steps ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    counter-reset: list; }
+  .rate-single-steps li {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer; }
+    .rate-single-steps li:hover {
+      color: #68868e; }
+    .rate-single-steps li:before {
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      content: counter(list) "";
+      counter-increment: list;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      background: #68868e;
+      color: #fff;
+      font-weight: 500;
+      font-size: 11px;
+      position: absolute;
+      left: 0;
+      top: -30px; }
+    .rate-single-steps li:after {
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 7px solid #68868e;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      position: absolute;
+      left: 0;
+      top: -12px; }
+    .rate-single-steps li.active {
+      color: #68868e; }
+      .rate-single-steps li.active:before {
+        background: #ffcd00;
+        color: #000; }
+      .rate-single-steps li.active:after {
+        border-top: 7px solid #ffcd00; }
+  @media (max-width: 1230px) {
+    .rate-single-steps ul {
+      flex-wrap: wrap;
+      justify-content: center; }
+    .rate-single-steps li {
+      margin: 15px; } }
+  @media (max-width: 640px) {
+    .rate-single-steps li {
+      width: 100%;
+      margin: 15px 0; }
+      .rate-single-steps li br {
+        display: none; }
+      .rate-single-steps li:before {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px 0 0;
+        position: static; }
+      .rate-single-steps li:after {
+        display: none; } }
+
+.rate-single-data ul li {
+  display: none;
+  list-style: none;
+  width: 100%;
+  overflow: auto; }
+  .rate-single-data ul li.active {
+    display: block; }
+.rate-single-data table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px; }
+.rate-single-data th {
+  line-height: 1;
+  padding: 20px;
+  color: #fff;
+  background: #000;
+  font-size: 16px;
+  font-weight: 700; }
+.rate-single-data td {
+  line-height: 1;
+  padding: 20px;
+  color: #000;
+  font-size: 16px;
+  border-bottom: 1px solid #cdcdcd;
+  font-weight: 500; }
+
 /*# sourceMappingURL=all-styles.css.map */
