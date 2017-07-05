@@ -161,4 +161,50 @@ $(window).ready(function() {
 
     });
 
+    $('.custom-select .current-value').click(function() {
+
+        if($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass('active');
+        } else {
+            $('.custom-select').removeClass('active');
+            $(this).parent().addClass('active');
+        }
+
+    });
+
+    $('.custom-select ul li').click(function() {
+
+        if(!$(this).hasClass('active')) {
+
+            var newValue = $(this).text();
+
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            $(this).parents('.custom-select').find('.current-value').text(newValue);
+
+            $(this).parents('.custom-select').removeClass('active');
+
+        }
+
+    });
+
+    $('input[type="file"]').change(function() {
+
+        var name = $(this).val().split('\\');
+        $(this).parent().siblings('.text').html(name[name.length - 1]);
+
+    });
+
+    $(document).click(function(event) {
+
+        if (!$(event.target).closest(".custom-select").length) {
+            $('.custom-select').removeClass('active');
+        }
+
+        if (!$(event.target).closest(".select-city").length) {
+            $('.select-city').removeClass('active');
+        }
+
+    });
+
 });
