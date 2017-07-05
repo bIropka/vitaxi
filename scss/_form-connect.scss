@@ -82,6 +82,7 @@
     display: block;
     margin: 15px 0;
     position: relative;
+    background: #fff;
 
     &:after {
       @include smooth(.4s);
@@ -106,7 +107,8 @@
       padding: 0 45px 0 20px;
       font-size: 15px;
       border-radius: 4px;
-      background: #fff;
+      position: relative;
+      z-index: 1;
     }
 
     .hidden-field {

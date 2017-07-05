@@ -7948,7 +7948,8 @@ article {
       background: url(../images/sprite-slider.png) no-repeat;
       opacity: .7;
       position: absolute;
-      top: 88px; }
+      top: 88px;
+      cursor: pointer; }
       article .slider-wrap .slider-control:hover {
         opacity: 1; }
     article .slider-wrap .slider-control-prev {
@@ -8061,8 +8062,6 @@ article {
         min-height: 0; }
     .slider-cost .image-wrap:hover:after {
       box-shadow: 0 0 0 15px #f6f6f6; }
-    .slider-cost .image-wrap:hover .icon {
-      transform: scale(1.1); }
   .slider-cost h4 a {
     font-weight: 500;
     font-size: 17px;
@@ -8405,7 +8404,7 @@ article {
       counter-increment: list;
       width: 18px;
       height: 18px;
-      line-height: 18px;
+      line-height: 22px;
       text-align: center;
       background: #68868e;
       color: #fff;
@@ -8542,7 +8541,8 @@ article {
   .form-connect .custom-select {
     display: block;
     margin: 15px 0;
-    position: relative; }
+    position: relative;
+    background: #fff; }
     .form-connect .custom-select:after {
       -webkit-transition: 0.4s;
       -moz-transition: 0.4s;
@@ -8567,7 +8567,8 @@ article {
       padding: 0 45px 0 20px;
       font-size: 15px;
       border-radius: 4px;
-      background: #fff; }
+      position: relative;
+      z-index: 1; }
     .form-connect .custom-select .hidden-field {
       display: none; }
     .form-connect .custom-select ul {
